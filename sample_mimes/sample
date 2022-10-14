@@ -1,0 +1,90 @@
+Delivered-To: your_own_masked_email@domain.com
+Received: by 2002:a05:6520:1088:b0:220:3a69:1aa5 with SMTP id cb8csp99186lkb;
+        Thu, 13 Oct 2022 17:13:43 -0700 (PDT)
+X-Received: by 2002:a63:7909:0:b0:458:1ba6:ec80 with SMTP id u9-20020a637909000000b004581ba6ec80mr2200261pgc.414.1665706423721;
+        Thu, 13 Oct 2022 17:13:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1665706423; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yOe9MS52pwohdfwLzrmx9cWS2ehzz6Ng0CCbUL3D2XYi8ebzEbU2+a2SgnqKIShoQk
+         d/VwBPH6C1+UFIKoKrjrAHlOX+1waP7IK0MlEzoF2a8HKsbXf4TqDg75Q7ICJynHSqlr
+         DKButgGzTdMMECf3wkIsd20tjs9sIDYO9yKaI/2FGSx8N1RlyuycibftCaLICTnBcoh2
+         SIGeiop1KPMBJpb5AOsYTtLYM70e7sB14qqkFEro0OpUbsOB+jjvkjVXqoEikbnRQuch
+         +jpqeW8wJGSU+rHpeBV0qcPmbxOKkkcy3dG2QNWeVZMmgBVf89XKaJOpB8veJybi49rp
+         E1Qg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:mime-version:from:dkim-signature;
+        bh=yC90kDZjDYH7Lv4Fp/hQffw8w5X9MlK4LktiiVoHg9c=;
+        b=YOEaaCpLvysb8Nlu+3FC2iv4y5Doo+cCk1XzrcvFpaqX5c/9rkfz7FH8JpglwlJafB
+         7IsEmR59PCbF2r5Z2M1N2OcJmMcDzBEtVV3pFKjiHcwTDismLfUo1r9yafpMAXyFh8vF
+         g0G1absvJBZMYVRG5pLKud5lGGzUQpWKOjR/yiDeB5SoV9aalo0MxufUahwBVWinADe8
+         22kCJ2fTSMFtYVNl2U0OtNVLwTsvGdx96GBxYCckTtPNggVAXA/5VhSwUukhdkz+TLW+
+         45tAj5NURp++qAiDEEr5iN4zLs7iD+Q5XsoZkp0Pq+G3ZEeTXfcRIZxfXeUTP0TfYSQx
+         cbgg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=qNc425uY;
+       spf=pass (google.com: domain of official.shaugatashraf@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=official.shaugatashraf@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <official.shaugatashraf@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u5-20020a17090282c500b00179ec41a402sor480789plz.19.2022.10.13.17.13.43
+        for <cep.jewel@gmail.com>
+        (Google Transport Security);
+        Thu, 13 Oct 2022 17:13:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of official.shaugatashraf@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=qNc425uY;
+       spf=pass (google.com: domain of official.shaugatashraf@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=official.shaugatashraf@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=to:subject:message-id:date:mime-version:from:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=yC90kDZjDYH7Lv4Fp/hQffw8w5X9MlK4LktiiVoHg9c=;
+        b=qNc425uY3YHs9kOIDm0HEO25N3jGm+K/dZndstaNi+PDJ4g8hkyKwX1m/ZtC2rx4n+
+         VmH6FLV96cGz4liTGfOe9Zvw9q4mZrb2pA8P3ZYW8hipjb7iU3BRtbUxviP6L+hsgFM4
+         0XPxPlm3HW2jdzTDnMQbfxSOeCKRvRWBqqjqWaa8iayLXNBVBijAiU6g5nUzRRhb8h+o
+         8mB0SLA9z6HtxCmZ6JQELHSqrs4HSLLVOek6aUaLTMgz4ybH0Z+Spe+1vP70TebRUCHx
+         zOeFUIz01t6H+hWLo/JK0cUlUSMEj4axPmJ26bNACJhCgnoQYgOt0U1DHQ5jpSM+CjZP
+         DCQQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=to:subject:message-id:date:mime-version:from:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=yC90kDZjDYH7Lv4Fp/hQffw8w5X9MlK4LktiiVoHg9c=;
+        b=Rs5pcg5h90urdIIM/HQaLNBSmCt1/sIYbC/5ImNempzK7m1rKtIua+DP5zhAZoU+sv
+         SlYWXbZgu/EJ4vJWWcS1T1t/f0eHMUcCWnIYGPDbCyIKXiPNAvO0EMLwDQtWElzJJOB1
+         4tLOZqb7a/eVo8Gg9g946uU4ysn6LiPGOljJB5AeR7y7F9IS6qmWKFAJhTV7YgImnCV0
+         lTJmHhfxMbShwCGABrMPpdFkrtFUBOSGjZ2LUhMEz7QhANqAKLSpF6VsrKjv5wO8Yr5r
+         L5g66iWuMiZ3k66VmPK0zXSUn2wvRmZEnO7KotK8Vguv9jM5h7cDPhrO5DDJGTYzZlK/
+         dELQ==
+X-Gm-Message-State: ACrzQf3hpwfhU5YT2B6l7A9Rgm3bduTd15ztCvXO5/u+V+XMivyjrilm
+	/JpLeamIcTsahGcfrN6ubII9CUBr+0H8ZGYAQI61y10MAS0=
+X-Google-Smtp-Source: AMsMyM7RD8/m6GhKNPOdHyGZlI+S6uQYnhK4PxYo4H5CPoAS+bBRwfllTAuCdlWBLk7lrySTQ3DuhTvtZoH0gti1cyY=
+X-Received: by 2002:a17:902:dccb:b0:181:a83b:2a8c with SMTP id
+ t11-20020a170902dccb00b00181a83b2a8cmr2535196pll.10.1665706423038; Thu, 13
+ Oct 2022 17:13:43 -0700 (PDT)
+Received: from 926130199834 named unknown by gmailapi.google.com with
+ HTTPREST; Thu, 13 Oct 2022 17:13:42 -0700
+From: Sample Pipe Customer <your_customer@customdomain.com>
+X-Mailer: PHPMailer 6.6.0 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Date: Thu, 13 Oct 2022 17:13:42 -0700
+Message-ID: <CAAJCmvZJYU=gEvuxmuWKDsE5m1h3sVRDkUy8g6admPu=QxQ01w@mail.gmail.com>
+Subject: [Fluent Support] Some plugins were automatically updated
+To: your_own_masked_email@domain.com
+Content-Type: text/plain; charset="UTF-8"
+
+Howdy! Some plugins have automatically updated to their latest
+versions on your site at https://yourdomain.com. No
+further action is needed on your part.
+
+
+These plugins are now up to date:
+- Fluent Support
+
+
+If you experience any issues or need support, the volunteers in the
+WordPress.org support forums may be able to help.
+https://wordpress.org/support/forums/
+
+The WordPress Team

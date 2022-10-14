@@ -1,0 +1,14 @@
+{
+  "name": "email-reply-parser-for-fluent-support",
+  "description": "Receive an email, store in S3 bucket, trigger a lambda function.",
+  "version": "1.0.0",
+  "author": "Andreas Heissenberger <andreas@heissenberger.at>, Shahjahan Jewel",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1232.0",
+    "axios": "^0.21.1",
+    "email-reply-parser": "^1.2.6",
+    "mailparser": "^2.3.4",
+    "turndown": "^7.1.1"
+  }
+}
